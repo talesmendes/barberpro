@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{EB0C6AAE-4F85-43BF-B46D-FAE0B312BD20}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="vcl\VCL_XData_Server.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="svc\XDataServerBarberPro.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="VCL_XData_Server">
+        <MSBuild Projects="vcl\VCL_XData_Server.dproj"/>
+    </Target>
+    <Target Name="VCL_XData_Server:Clean">
+        <MSBuild Projects="vcl\VCL_XData_Server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCL_XData_Server:Make">
+        <MSBuild Projects="vcl\VCL_XData_Server.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="XDataServerBarberPro">
+        <MSBuild Projects="svc\XDataServerBarberPro.dproj"/>
+    </Target>
+    <Target Name="XDataServerBarberPro:Clean">
+        <MSBuild Projects="svc\XDataServerBarberPro.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="XDataServerBarberPro:Make">
+        <MSBuild Projects="svc\XDataServerBarberPro.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="VCL_XData_Server;XDataServerBarberPro"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="VCL_XData_Server:Clean;XDataServerBarberPro:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="VCL_XData_Server:Make;XDataServerBarberPro:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

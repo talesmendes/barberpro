@@ -1,0 +1,34 @@
+object FrameHora: TFrameHora
+  Align = Client
+  HitTest = False
+  Size.Width = 85.000000000000000000
+  Size.Height = 50.000000000000000000
+  Size.PlatformDefault = False
+  object rectHora: TRectangle
+    Align = Client
+    Fill.Color = xFF232323
+    HitTest = False
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Size.Width = 75.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    XRadius = 6.000000000000000000
+    YRadius = 6.000000000000000000
+    object lblHora: TLabel
+      Align = Client
+      StyledSettings = [Family, Style]
+      Size.Width = 75.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = '00:00'
+      TabOrder = 2
+    end
+  end
+end

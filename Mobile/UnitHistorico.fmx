@@ -1,0 +1,89 @@
+object FrmHistorico: TFrmHistorico
+  Left = 0
+  Top = 0
+  Caption = 'Agendamentos'
+  ClientHeight = 540
+  ClientWidth = 320
+  Fill.Color = xFF191919
+  Fill.Kind = Solid
+  Position = MainFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object lytToolbar: TLayout
+    Align = Top
+    Size.Width = 320.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      Align = Contents
+      StyledSettings = [Family, Style]
+      Size.Width = 320.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'Meus Agendamentos'
+      TabOrder = 1
+    end
+    object imgFechar: TImage
+      MultiResBitmap.Height = 64
+      MultiResBitmap.Width = 64
+      MultiResBitmap = <
+        item
+          Width = 64
+          Height = 64
+          PNG = {
+            89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+            DE0000000473424954080808087C086488000001C749444154789CEDDABB6E13
+            411406608B824B8D14DE00532448F01450041E852AD4BC0934A123E11190B83C
+            0646A225561253123E8AF5222BE4B2638F7DD0EEF92A77FB9F95FCEFCC6846A3
+            94524A29A5FF18C6788F9F98CD7F3F88CEB511D8C5A97F4D713F3ADF5A610F67
+            170CDF3A8CCEB816B885D7570CDE3A89CE5A1DB6F0A9C3F0F0233A6F55D8C1A4
+            E3F0B01F9DB91A9797DD658EF4A5045D5F76E74DB0139D7B65B8A95BD92DFA82
+            7BD1D95786BBF85038FC5BDC89CEBE326CE36BC1E0BFF12A3A77157882E382E1
+            67781E9DBB0ABCC0AF82E1BFE37174EE95C9B2CBB2EB2ACB2E3A7715B2EC8A64
+            D945675F99F26DEC19F6A27357A139B09C160C7F8ADDE8DCD5E0A060F8893E6C
+            6317E1A4E3F01FB1159DF7BC1B1B7E9E0D3F6FFDF06EE87F81B1E67CAEAB7E95
+            E06834F0CF60CBF20BA1DBD1D9ABB1DC52F8B33E2C851769364325C7DCFDD80C
+            2DC25343DD0EB734E538CC0391962CC72CC7BF2C578E8FA2735725CB71A99563
+            96E35CEFCAB1EB5DA045BD2CC797CA2F486C47E7AE0ACF0CF58A4C0B0FF1ADE0
+            25F4E79254CB90AFC9B534E5F8A6C30B388ECEBA56AE2FC783E88C6BA729C7D9
+            05C34F318ECEB7119A83D7C3F98B38C2BEBE7D01524A29A5B4717F00BE0C4660
+            A06575390000000049454E44AE426082}
+          FileName = 'D:\BarberPro\Fontes\Mobile\Images\back.png'
+        end>
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Size.Width = 32.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      OnClick = imgFecharClick
+    end
+  end
+  object lbHistorico: TListBox
+    Align = Client
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 475.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'transparentlistboxstyle'
+    TabOrder = 2
+    ShowScrollBars = False
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 300.000000000000000000
+    Viewport.Height = 475.000000000000000000
+  end
+end

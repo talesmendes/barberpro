@@ -80,7 +80,9 @@ begin
                 LoadImageFromURL(foto, BASE_URLIMG + frame.imgIcone.TagString);
 
                 frame.imgIcone.TagString := '';
-                frame.imgIcone.bitmap := foto;
+                //frame.imgIcone.bitmap := foto;
+                frame.imgIcone.Bitmap.Assign(foto);
+                foto.Free;
             end;
         end;
 

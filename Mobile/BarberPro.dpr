@@ -21,6 +21,7 @@ uses
 {$R *.res}
 
 begin
+  ReportMemoryLeaksOnShutdown := True;
   Application.Initialize;
   Application.CreateForm(TFrmLogin, FrmLogin);
   Application.CreateForm(TFrmHistorico, FrmHistorico);

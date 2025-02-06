@@ -36,8 +36,8 @@ var
   DmGeral: TDmGeral;
 
 Const
-  BASE_URL = 'http://tmcaws.ddns.net:2001/tms/xdata/appservice';
-  BASE_URLIMG = 'http://tmcaws.ddns.net:2001/tms/files/';
+  BASE_URL = 'http://192.168.0.116:2001/tms/xdata/appservice';
+  BASE_URLIMG = 'http://192.168.0.116:2001/tms/files/';
 
   {
   Alterar o arquivo: "AndroidManifest.template.xml"

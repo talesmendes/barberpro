@@ -55,7 +55,7 @@ implementation
 
 {$R *.fmx}
 
-uses UnitPrincipal, DataModule.Geral;
+uses UnitPrincipal, DataModule.Geral, uFunctions, UnitExemplo;
 
 procedure TFrmLogin.TerminateLogin(Sender: TObject);
 begin
@@ -101,13 +101,18 @@ end;
 
 procedure TFrmLogin.btnLoginClick(Sender: TObject);
 begin
-    TLoading.Show(FrmLogin);
+  TUtils.OpenForm<TfrmExemplo>(procedure(aForm: TfrmExemplo)
+  begin
+    aForm.Codigo := 1001;
+  end);
 
-    TLoading.ExecuteThread(procedure
-    begin
-        DmGeral.Login(edtEmail.Text, edtSenha.Text, DmGeral.TabUsuario);
-    end,
-    TerminateLogin);
+   //TLoading.Show(FrmLogin);
+
+   // TLoading.ExecuteThread(procedure
+   // begin
+   //     DmGeral.Login(edtEmail.Text, edtSenha.Text, DmGeral.TabUsuario);
+   // end,
+   // TerminateLogin);
 end;
 
 

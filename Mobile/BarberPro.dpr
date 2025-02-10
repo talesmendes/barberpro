@@ -16,7 +16,9 @@ uses
   UnitFrameHistorico in 'Frames\UnitFrameHistorico.pas' {FrameHistorico: TFrame},
   UnitConfig in 'UnitConfig.pas' {FrmConfig},
   DataModule.Geral in 'DataModules\DataModule.Geral.pas' {DmGeral: TDataModule},
-  uSession in 'Utils\uSession.pas';
+  uSession in 'Utils\uSession.pas',
+  UnitFormBase in 'UnitFormBase.pas' {frmBase},
+  UnitExemplo in 'UnitExemplo.pas' {frmExemplo};
 
 {$R *.res}
 

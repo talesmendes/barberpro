@@ -2,8 +2,14 @@ unit uFunctions;
 
 interface
 
-uses FMX.Graphics, System.Net.HttpClientComponent, System.Classes,
+uses FMX.Forms, FMX.Graphics, System.Net.HttpClientComponent, System.Classes,
   System.SysUtils, System.Net.HttpClient;
+
+type
+  TUtils = class
+  public
+    class procedure OpenForm<T: TForm>(aAfterCreate: TProc<T> = nil);
+  end;
 
 procedure LoadImageFromURL(img: TBitmap; url: string);
 function Round2(aValue:double):double;
@@ -11,6 +17,18 @@ function UTCtoDateBR(dt: string): string;
 function UTCtoShortDateBR(dt: string): string;
 
 implementation
+
+{ TUtils }
+
+class procedure TUtils.OpenForm<T>(aAfterCreate: TProc<T>);
+var
+  Form: T;
+begin
+  Application.CreateForm(T, Form);
+  if Assigned(aAfterCreate) then
+    aAfterCreate(Form);
+  Form.Show;
+end;
 
 procedure LoadImageFromURL(img: TBitmap; url: string);
 var

@@ -264,6 +264,14 @@
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="Utils\uSession.pas"/>
+        <DCCReference Include="UnitFormBase.pas">
+            <Form>frmBase</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UnitExemplo.pas">
+            <Form>frmExemplo</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
